@@ -43,6 +43,7 @@ resource "aws_security_group" "ec2_security_group" {
 resource "aws_instance" "Monitoring_server" {
 ami = "ami-0b6d9d3d33ba97d99"  
 instance_type = "t3.medium"
+subnet_id = "subnet-061324d67de2fbb15"
 security_groups = [aws_security_group.ec2_security_group.name]
 key_name = var.key_name
 tags = {
