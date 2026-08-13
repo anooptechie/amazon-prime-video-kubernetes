@@ -121,7 +121,7 @@ Without this, these services will not be able to access AWS resources securely.
 Before executing the below command, in the 'ssh-public-key' keep the  '<PEM FILE NAME>' (dont give .pem. Just give the pem file name) which was used to create Jenkins Server
 
 eksctl create nodegroup --cluster=Cloudaseem \
-                       --region=ap-south-1 \
+                       --region=us-east-1 \
                        --name=node2 \
                        --node-type=t3.medium \
                        --nodes=2 \
@@ -129,7 +129,7 @@ eksctl create nodegroup --cluster=Cloudaseem \
                        --nodes-max=4 \
                        --node-volume-size=20 \
                        --ssh-access \
-                       --ssh-public-key=starbucks1 \
+                       --ssh-public-key=cloudaseem \
                        --managed \
                        --asg-access \
                        --external-dns-access \
